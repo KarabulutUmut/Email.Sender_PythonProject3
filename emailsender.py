@@ -1,4 +1,3 @@
-import getpass
 import smtplib
 from email.message import EmailMessage
 import imghdr
