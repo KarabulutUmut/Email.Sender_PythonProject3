@@ -1,6 +1,7 @@
 # Email Sender
 
 > This program is for sending emails. Attachements can be included.
+> There is a counter to see how many emails have been sent in total.
 
 ## For PDF
 
