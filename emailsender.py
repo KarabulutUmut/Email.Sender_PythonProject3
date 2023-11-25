@@ -9,7 +9,7 @@ port = 587
 
 from_email = "umutkarabulut.personal@outlook.com"
 to_email = "umutkarabulut.personal@gmail.com"
-password = getpass.getpass("Enter password: ")
+password = input("Enter password: ")
 
 msg = EmailMessage()
 msg['Subject'] = 'Appointment Found!'
