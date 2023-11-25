@@ -4,17 +4,17 @@ from email.message import EmailMessage
 import imghdr
 
 
-HOST = "smtp-mail.outlook.com"
-PORT = 587
+host = "smtp-mail.outlook.com"
+port = 587
 
-FROM_EMAIL = "umutkarabulut.personal@outlook.com"
-TO_EMAIL = "mage9898@outlook.com"
-PASSWORD = getpass.getpass("Enter password: ")
+from_email = "umutkarabulut.personal@outlook.com"
+to_email = "umutkarabulut.personal@gmail.com"
+password = getpass.getpass("Enter password: ")
 
 msg = EmailMessage()
 msg['Subject'] = 'Appointment Found!'
-msg['From'] = FROM_EMAIL
-msg['To'] = TO_EMAIL
+msg['From'] = from_email
+msg['To'] = to_email
 msg.set_content('Available appointment was found. You snooze, you lose!')
 
 images = ['C:\\Pycharm Projects\\emailsender\\images\\firstcomefirstserve.jpg',
@@ -27,9 +27,9 @@ for img in images:
 
     msg.add_attachment(file_data, maintype='image', subtype=file_type, filename=file_name)
 
-with smtplib.SMTP(HOST, PORT) as server:
+with smtplib.SMTP(host, port) as server:
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login(FROM_EMAIL, PASSWORD)
+    server.login(from_email, password)
     server.send_message(msg)
