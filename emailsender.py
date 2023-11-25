@@ -19,7 +19,6 @@ def email_Count(filename="email_count.txt"):
     with open(filename, "w") as file:
         file.write(str(count))
 
-    return count
 
 host = "smtp-mail.outlook.com"
 port = 587
