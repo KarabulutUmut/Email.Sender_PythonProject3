@@ -8,6 +8,7 @@ port = 587
 
 from_email = "umutkarabulut.personal@outlook.com"
 to_email = "umutkarabulut.personal@gmail.com"
+# getpass could be use for more security, but then program needs to be runned by terminal
 password = input("Enter password: ")
 
 msg = EmailMessage()
