@@ -1,7 +1,25 @@
+import os
 import smtplib
 from email.message import EmailMessage
 import imghdr
 
+def email_Count(filename="email_count.txt"):
+    if os.path.exists(filename):
+        with open(filename, "r") as file:
+            count = file.read()
+            if count.isdigit():
+                count = int(count)
+            else:
+                count = 0
+    else:
+        count = 0
+
+    count += 1
+
+    with open(filename, "w") as file:
+        file.write(str(count))
+
+    return count
 
 host = "smtp-mail.outlook.com"
 port = 587
@@ -33,3 +51,5 @@ with smtplib.SMTP(host, port) as server:
     server.ehlo()
     server.login(from_email, password)
     server.send_message(msg)
+
+email_Count()
