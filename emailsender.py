@@ -34,8 +34,8 @@ msg['From'] = from_email
 msg['To'] = to_email
 msg.set_content('Available appointment was found. You snooze, you lose!')
 
-images = ['C:\\Pycharm Projects\\emailsender\\images\\firstcomefirstserve.jpg',
-          'C:\\Pycharm Projects\\emailsender\\images\\appointmentreminder.png']
+images = ['C:\\Pycharm Projects\\Email Sender\\images\\firstcomefirstserve.jpg',
+          'C:\\Pycharm Projects\\Email Sender\\images\\appointmentreminder.png']
 for img in images:
     with open(img, 'rb') as image:
         file_data = image.read()
