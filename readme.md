@@ -1,6 +1,6 @@
 # Email Sender
 
-    This program is for sending emails. Attachements can be included.
+> This program is for sending emails. Attachements can be included.
 
 ## For PDF
 
